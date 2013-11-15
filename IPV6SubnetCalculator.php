@@ -24,7 +24,7 @@ class IPV6SubnetCalculator
 	public function testValidAddress($address)
 	{
 		// 8 groups of 4 hexidecimal characters
-		return filter_var($address, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6);
+		return (filter_var($address, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) !== FALSE);
 	}
 
 	/**
